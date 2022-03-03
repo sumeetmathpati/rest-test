@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>978</width>
-    <height>600</height>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="statusTip">
+   <string/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -24,7 +27,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="collectionTab">
        <attribute name="title">
@@ -59,7 +62,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="urlInput">
+          <property name="placeholderText">
+           <string>Enter URL</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="sendRequestPushButton">
@@ -79,7 +86,7 @@
       <item>
        <widget class="QTabWidget" name="middleSection">
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="queryTab">
          <attribute name="title">
@@ -145,7 +152,7 @@
           <item>
            <widget class="QTabWidget" name="NoneTab">
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -181,7 +188,33 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextEdit" name="outputTextEdit"/>
+     <layout class="QVBoxLayout" name="outputLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="responseStatusTitle">
+          <property name="text">
+           <string>Status:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="responseStatusResult">
+          <property name="text">
+           <string>StatusResult</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="outputTextEdit">
+        <property name="placeholderText">
+         <string>Output</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
