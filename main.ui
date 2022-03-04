@@ -33,11 +33,43 @@
        <attribute name="title">
         <string>Collections</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QPushButton" name="addCollectionButton">
+            <property name="text">
+             <string>Add Collection</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidget"/>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="envTab">
        <attribute name="title">
         <string>Env</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QPushButton" name="addEnvButton">
+            <property name="text">
+             <string>Add Environment</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidget_2"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -86,7 +118,7 @@
       <item>
        <widget class="QTabWidget" name="middleSection">
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="queryTab">
          <attribute name="title">
@@ -152,7 +184,7 @@
           <item>
            <widget class="QTabWidget" name="NoneTab">
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -163,11 +195,67 @@
              <attribute name="title">
               <string>Basic</string>
              </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Basic Authentication</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit">
+                  <property name="placeholderText">
+                   <string>Username</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_2">
+                  <property name="placeholderText">
+                   <string>Password</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </widget>
             <widget class="QWidget" name="tab_5">
              <attribute name="title">
               <string>Bearer</string>
              </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Bearer Token</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit">
+                <property name="placeholderText">
+                 <string>Enter bearer token.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
             <widget class="QWidget" name="tab_6">
              <attribute name="title">
@@ -182,6 +270,100 @@
          <attribute name="title">
           <string>Body</string>
          </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QTabWidget" name="bodyTabs">
+            <property name="currentIndex">
+             <number>3</number>
+            </property>
+            <widget class="QWidget" name="jsonBody">
+             <attribute name="title">
+              <string>JSON</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>JSON Content</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_2"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="xmlBody">
+             <attribute name="title">
+              <string>XML</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>XML Content</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_3"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="textBody">
+             <attribute name="title">
+              <string>Text</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Text Content</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_4"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="binaryBody">
+             <attribute name="title">
+              <string>Binary</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>PushButton</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>File path</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </widget>
       </item>
